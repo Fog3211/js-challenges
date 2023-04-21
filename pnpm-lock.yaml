@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 devDependencies:
   '@airmus/eslint-config':
-    specifier: ^0.38.7
-    version: 0.38.7(eslint@8.38.0)(typescript@5.0.4)
+    specifier: ^0.38.8
+    version: 0.38.8(eslint@8.38.0)(typescript@5.0.4)
   '@tsconfig/recommended':
     specifier: ^1.0.2
     version: 1.0.2
@@ -16,8 +16,8 @@ devDependencies:
 
 packages:
 
-  /@airmus/eslint-config@0.38.7(eslint@8.38.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-YJFTEmXmfZVvW0FRDu1HbYiYTjiQfzNU1otLQoNJUNsNkX7vwK+XOfsdrjna7Q4cURjPeEj+Tb39CztguhS/vQ==}
+  /@airmus/eslint-config@0.38.8(eslint@8.38.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-KasLY2nlEkghABr3Vy154Z3DECIdFJnTWJZc66/XPegoZa3Nns5wbV/Iwg812NuCwRyXTOY5IjcL286/mYLLxw==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
