@@ -1,7 +1,7 @@
 {
   "root": true,
   "ignorePatterns": ["build"],
-  "extends": ["@antfu"],
+  "extends": ["@airmus"],
   "rules": {
     "curly": ["error", "all"]
   }

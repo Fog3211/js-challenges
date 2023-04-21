@@ -10,7 +10,7 @@
     "dev": "esno watch ./src/index.ts"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.5",
+    "@airmus/eslint-config": "^0.38.7",
     "@tsconfig/recommended": "^1.0.2",
     "eslint": "^8.38.0",
     "esno": "^0.16.3"

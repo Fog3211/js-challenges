@@ -1,12 +1,12 @@
 declare global {
   interface Promise<T> {
-    myCatch(onCatch: Function): Promise<T>
+    myCatch(onCatch: (err: any) => any): Promise<T>
   }
 }
 
 export function initPromiseFinally() {
   // eslint-disable-next-line no-extend-native
-  Promise.prototype.myCatch = function (onCatch: Function) {
+  Promise.prototype.myCatch = function (onCatch: (err: any) => any) {
     return this.then(
       null,
       onCatch,
