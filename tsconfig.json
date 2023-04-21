@@ -1,0 +1,29 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "outDir": "./dist",
+    "sourceMap": false,
+    "baseUrl": "./",
+    "declaration": true,
+    "moduleResolution": "node",
+    "exactOptionalPropertyTypes": false,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "esnext"
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
