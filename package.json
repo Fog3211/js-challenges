@@ -2,17 +2,13 @@
   "name": "js-challenges",
   "version": "1.0.0",
   "description": "",
-  "author": "",
+  "author": "Fog3211",
   "license": "ISC",
   "keywords": [],
   "main": "index.js",
-  "scripts": {
-    "dev": "esno watch ./src/index.ts"
-  },
   "devDependencies": {
     "@airmus/eslint-config": "^0.38.8",
     "@tsconfig/recommended": "^1.0.2",
-    "eslint": "^8.38.0",
-    "esno": "^0.16.3"
+    "eslint": "^8.38.0"
   }
 }
