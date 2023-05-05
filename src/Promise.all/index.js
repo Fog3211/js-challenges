@@ -86,6 +86,7 @@ function test() {
   // [1, 2, 3, 4]
 
   Promise.myAll([
+    // eslint-disable-next-line prefer-promise-reject-errors
     Promise.reject(1),
     Promise.resolve(2),
     Promise.resolve(3),
