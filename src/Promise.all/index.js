@@ -1,39 +1,35 @@
-function initPromiseAll() {
-  Promise.myAll = function (_promises) {
-    if (
-      !(
-        typeof _promises === 'object'
+Promise.myAll = function (_promises) {
+  if (
+    !(
+      typeof _promises === 'object'
         && _promises !== null
         && typeof _promises[Symbol.iterator] === 'function'
-      )
-    ) {
-      throw new TypeError(`${_promises} is not iterable`)
-    }
-    return new Promise((resolve, reject) => {
-      try {
-        const promises = Array.from(_promises)
-        const result = []
-        let fulfilledCount = 0
-        if (promises.length === 0) {
-          resolve(result)
-        }
-        for (let i = 0; i < promises.length; i++) {
-          Promise.resolve(promises[i]).then((res) => {
-            result[i] = res
-            if (++fulfilledCount === promises.length - 1) {
-              resolve(result)
-            }
-          }, reject)
-        }
-      }
-      catch (err) {
-        reject(err)
-      }
-    })
+    )
+  ) {
+    throw new TypeError(`${_promises} is not iterable`)
   }
+  return new Promise((resolve, reject) => {
+    try {
+      const promises = Array.from(_promises)
+      const result = []
+      let fulfilledCount = 0
+      if (promises.length === 0) {
+        resolve(result)
+      }
+      for (let i = 0; i < promises.length; i++) {
+        Promise.resolve(promises[i]).then((res) => {
+          result[i] = res
+          if (++fulfilledCount === promises.length - 1) {
+            resolve(result)
+          }
+        }, reject)
+      }
+    }
+    catch (err) {
+      reject(err)
+    }
+  })
 }
-
-initPromiseAll()
 
 // 验证:
 function test() {
