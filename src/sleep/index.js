@@ -1,6 +1,5 @@
 function sleep(ms, result) {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(result), ms);
-  });
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(result), ms)
+  })
 }
-
