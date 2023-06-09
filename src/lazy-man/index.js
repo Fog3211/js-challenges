@@ -38,41 +38,57 @@ class LazyManClass {
 
   eat(food) {
     const that = this
-    const fn = (function (food) {
-      return function () {
-        console.log(`eat ${food}`)
-        that.next()
-      }
-    })(food)
-    this.taskList.push(fn)
+    // const fn = (function (food) {
+    //   return function () {
+    //     console.log(`eat ${food}`)
+    //     that.next()
+    //   }
+    // })(food)
+    // this.taskList.unshift(fn)
+    this.taskList.push(() => {
+      console.log(`eat ${food}`)
+      that.next()
+    })
     return this
   }
 
   sleepFirst(time) {
     const that = this
-    const fn = (function (time) {
-      return function () {
-        setTimeout(() => {
-          console.log(`sleep time before ${time} s`)
-          that.next()
-        }, time * 1000)
-      }
-    })(time)
-    this.taskList.unshift(fn)
+    // const fn = (function (time) {
+    //   return function () {
+    //     setTimeout(() => {
+    //       console.log(`sleep time before ${time} s`)
+    //       that.next()
+    //     }, time * 1000)
+    //   }
+    // })(time)
+    // this.taskList.unshift(fn)
+    this.taskList.unshift(() => {
+      setTimeout(() => {
+        console.log(`sleep time before ${time} s`)
+        that.next()
+      }, time * 1000)
+    })
     return this
   }
 
   sleep(time) {
     const that = this
-    const fn = (function (time) {
-      return function () {
-        setTimeout(() => {
-          console.log(`sleep ${time} s`)
-          that.next()
-        }, time * 1000)
-      }
-    })(time)
-    this.taskList.push(fn)
+    // const fn = (function (time) {
+    //   return function () {
+    //     setTimeout(() => {
+    //       console.log(`sleep ${time} s`)
+    //       that.next()
+    //     }, time * 1000)
+    //   }
+    // })(time)
+    // this.taskList.push(fn)
+    this.taskList.push(() => {
+      setTimeout(() => {
+        console.log(`sleep time before ${time} s`)
+        that.next()
+      }, time * 1000)
+    })
     return this
   }
 
